@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Fetch</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</head>
+<style>
+    body {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.171), rgba(0, 0, 0, 0.146)), url('https://img.freepik.com/free-photo/movie-background-collage_23-2149876003.jpg?t=st=1711989047~exp=1711992647~hmac=fd527f3163c201a82ebf7738442cea4470fc0e7a189c99fea0cef71ea5e7fff2&w=996');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 100%;
+        min-height: 100vh;
+    }
+</style>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-black">
+        <!-- Container wrapper -->
+        <div class="container">
+            <!-- Navbar brand -->
+            <a class="navbar-brand me-2" href="#">
+                <img src="https://1000logos.net/wp-content/uploads/2023/11/Justwatch-Logo.png" height="60"
+                    alt="MDB Logo" loading="lazy" style="margin-top: -1px;" />
+            </a>
+
+            <!-- Toggle button -->
+            <button class="navbar-toggler order-lg-first" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarButtonsExample" aria-controls="navbarButtonsExample" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="visually-hidden">Toggle navigation</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-list"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2 3.5A1.5 1.5 0 0 1 3.5 2h9A1.5 1.5 0 0 1 14 3.5 1.5 1.5 0 0 1 12.5 5h-9A1.5 1.5 0 0 1 2 3.5zM1 5.5A1.5 1.5 0 0 1 2.5 4h9A1.5 1.5 0 0 1 13 5.5 1.5 1.5 0 0 1 11.5 7h-9A1.5 1.5 0 0 1 1 5.5zm1 6a1.5 1.5 0 0 1 1.5-1.5h9a1.5 1.5 0 0 1 0 3h-9A1.5 1.5 0 0 1 2 11.5zM1 13.5A1.5 1.5 0 0 1 2.5 12h9a1.5 1.5 0 0 1 0 3h-9A1.5 1.5 0 0 1 1 13.5z" />
+                </svg>
+            </button>
+
+
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse order-lg-last" id="navbarButtonsExample">
+                <!-- Left links -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item disabled">
+                        <a class="nav-link text-light disabled" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light disabled" href="#">New</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light disabled" href="#">Popular</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light disabled" href="#">List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light disabled" href="#">Sports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light disabled" href="#">Guide</a>
+                    </li>
+                </ul>
+                <!-- Left links -->
+
+                <div class="d-flex align-items-center">
+                    <button type="button" class="btn btn-sm btn-danger text-light me-3 disabled">
+                        Sign up
+                    </button>
+                </div>
+            </div>
+            <!-- Collapsible wrapper -->
+        </div>
+        <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h4 class="mt-5 text-center mb-2" style="color: yellow;">Search For Your Favorite Movie</h4>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-10 col-md-6">
+                <form>
+                    <div class="input-group">
+                        <input id="search" type="text" class="form-control" placeholder="Enter Movie Name">
+                        <div class="input-group-append">
+                            <button type="button" onclick="searchData()" class="btn btn-dark">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div id="result">
+
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
